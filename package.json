@@ -16,5 +16,16 @@
   "bugs": {
     "url": "https://github.com/IndowApp/Indow/issues"
   },
-  "homepage": "https://github.com/IndowApp/Indow#readme"
+  "homepage": "https://github.com/IndowApp/Indow#readme",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "body-parser": "^1.18.3",
+    "concurrently": "^4.0.1",
+    "express": "^4.16.4",
+    "mongoose": "^5.3.10",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.18.6"
+  }
 }
