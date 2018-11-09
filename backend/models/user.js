@@ -8,11 +8,12 @@ module.exports = (sequelize, DataTypes) => {
       email: DataTypes.STRING, 
     });
   
+    
+    User.associate = (models) => {
+      models.User.hasMany(models.BankAccount);
     // UNCOMMENT BELOW WHEN THE USER PREFERENCE TABLE IS COMPLETE 
-    // 
-    // User.associate = (models) => {
     //   models.User.hasOne(models.UserPreference);
-    // }
+    }
   
     return User;
   };

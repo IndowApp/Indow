@@ -16,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
   
     
     Transaction.associate = (models) => {
-      models.Transaction.hasOne(models.BankAccount);
+      models.Transaction.belongsTo(models.BankAccount);
     // uncomment below when/if we decide to use an asset table: 
     // models.BankAccount.hasMany(models.Asset);
     }
