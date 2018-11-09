@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
     });
   
     
-    User.associate = (models) => {
+    BankAccount.associate = (models) => {
       models.BankAccount.hasOne(models.User);
     // uncomment below when/if we decide to use an asset table: 
     // models.BankAccount.hasMany(models.Asset);
