@@ -13,6 +13,9 @@ const PLAID_SECRET = envvar.string('PLAID_SECRET', '14047a01e94ef5b64902601a0cad
 const PLAID_PUBLIC_KEY = envvar.string('PLAID_PUBLIC_KEY', 'af3778e304e1a63b1eabb2c55bb229');
 const PLAID_ENV = envvar.string('PLAID_ENV', 'sandbox');
 
+const models = require('./models');
+
+
 let ACCESS_TOKEN = null;
 let PUBLIC_TOKEN = null;
 let ITEM_ID = null;
@@ -99,9 +102,20 @@ app.get('/transactions', function (request, response, next) {
   });
 });
 
-const server = app.listen(APP_PORT, function () {
-  console.log('plaid-quickstart server listening on port ' + APP_PORT);
-});
+// const server = app.listen(APP_PORT, function () {
+//   console.log('plaid-quickstart server listening on port ' + APP_PORT);
+// });
+
+
+
+// First, make sure the Database tables and models are in sync
+// then, start up the server and start listening.
+const server  = models.sequelize.sync({force: false})
+  .then(() => {
+    app.listen(APP_PORT, () => {
+      console.log(`Server is up and running on port: ${APP_PORT}`)
+    });
+  });
 
 const prettyPrintResponse = response => {
   console.log(util.inspect(response, {
