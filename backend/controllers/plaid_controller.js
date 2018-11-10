@@ -32,10 +32,13 @@ let prettyPrintResponse = response => {
 const PlaidController = {
     registerRouter() {
         const router = express.Router();
-        
+
         router.get('/', this.index);
         router.post('/get_access_token', this.getAccessToken);
-        
+        router.get('/transactions', this.transactions);
+        router.get('/balance', this.balance);
+        router.get('/accounts', this.accounts);
+
         return router;
     },
     index(request, response, next) {
@@ -44,7 +47,8 @@ const PlaidController = {
             PLAID_PUBLIC_KEY: PLAID_PUBLIC_KEY,
             PLAID_ENV: PLAID_ENV,
         });
-    },  
+
+    },
     getAccessToken(request, response, next) {
         PUBLIC_TOKEN = request.body.public_token;
         client.exchangePublicToken(PUBLIC_TOKEN, (error, tokenResponse) => {
@@ -64,7 +68,56 @@ const PlaidController = {
             });
         });
     },
-
+    transactions(request, response, next) {
+        let startDate = moment().subtract(30, 'days').format('YYYY-MM-DD');
+        let endDate = moment().formate('YYYY-MM-DD');
+        client.getTransactions(ACCESS_TOKEN, startDate, endDate, {
+            count: 250,
+            offset: 0,
+        }, (error, transactionsResponse) => {
+            if (error != null) {
+                prettyPrintResponse(error);
+                return response.json({
+                    error: error,
+                });
+            } else {
+                prettyPrintResponse(transactionsResponse);
+                resposne.json({
+                    error: null,
+                    transactions: transactionsResponse,
+                });
+            }
+        });
+    },
+    balance(request, response, next) {
+        client.getBalance(ACCESS_TOKEN, (error, balanceResponse) => {
+            if (error != null) {
+                prettyPrintResponse(error);
+                return response.json({
+                    error: error,
+                });
+            }
+            prettyPrintResponse(balanceResponse);
+            reponse.json({
+                error: null,
+                balance: balanceResponse,
+            });
+        });
+    },
+    accounts(request, response, next) {
+        client.getAccounts(ACCESS_TOKEN, (error, accountsReponse) => {
+            if (error != null) {
+                prettyPrintResponse(error);
+                return response.json({
+                    errror: error,
+                });
+            }
+            prettyPrintResponse(accountsReponse);
+            response.json({
+                error: error,
+            });
+        });
+    },
 };
 
 module.exports = PlaidController.registerRouter();
