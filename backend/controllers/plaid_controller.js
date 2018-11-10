@@ -32,9 +32,9 @@ let prettyPrintResponse = response => {
 const PlaidController = {
     registerRouter() {
         const router = express.Router();
-
-        router.get('/', this.index());
-        router.post('/get_access_token', this.getAccessToken());
+        
+        router.get('/', this.index);
+        router.post('/get_access_token', this.getAccessToken);
         
         return router;
     },
@@ -64,6 +64,7 @@ const PlaidController = {
             });
         });
     },
+
 };
 
 module.exports = PlaidController.registerRouter();

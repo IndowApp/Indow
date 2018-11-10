@@ -9,7 +9,6 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-//Throws error
 const controllers = require('./controllers');
 app.use(controllers);   
 
