@@ -1,3 +1,4 @@
+const util = require('util');
 const express = require('express');
 const plaid = require('plaid');
 const envvar = require('envvar');
@@ -8,6 +9,10 @@ const PLAID_SECRET = envvar.string('PLAID_SECRET', '14047a01e94ef5b64902601a0cad
 const PLAID_PUBLIC_KEY = envvar.string('PLAID_PUBLIC_KEY', 'af3778e304e1a63b1eabb2c55bb229');
 const PLAID_ENV = envvar.string('PLAID_ENV', 'sandbox');
 
+const INSTITUTION_ID = 'ins_9';
+const INITIAL_PRODUCTS = ['transactions','auth','income','identity'];
+
+
 let ACCESS_TOKEN = null;
 let PUBLIC_TOKEN = null;
 let ITEM_ID = null;
@@ -16,7 +21,7 @@ const client = new plaid.Client(
     PLAID_CLIENT_ID,
     PLAID_SECRET,
     PLAID_PUBLIC_KEY,
-    plaid.environments[PLAID_ENV], {
+    plaid.environments.sandbox, {
         version: '2018-05-22'
     }
 );
@@ -34,6 +39,8 @@ const PlaidController = {
         const router = express.Router();
 
         router.get('/', this.index);
+        router.get('/item', this.item);
+        router.post('/set_access_token', this.setAccessToken);
         router.post('/get_access_token', this.getAccessToken);
         router.get('/transactions', this.transactions);
         router.get('/balance', this.balance);
@@ -41,30 +48,75 @@ const PlaidController = {
 
         return router;
     },
+    item(request, response, next) {
+        client.getItem(ACCESS_TOKEN, (error, itemResponse) => {
+            if (error != null) {
+                prettyPrintResponse(error);
+                return response.json({
+                    error: error
+                });
+            }
+
+            client.getInstitutionById(itemResponse.item.institution_id, (err, instRes) => {
+                if (err != null) {
+                    let msg = 'Unable to pull insitution information from the Plaid API.';
+                    console.log(msg + '\n' + JSON.stringify(error));
+                    return response.json({
+                        error: msg
+                    });
+                } else {
+                    prettyPrintResponse(itemResponse);
+                    response.json({
+                        item: itemResponse.item,
+                        institution: instRes.institution,
+                    });
+                }
+            });
+        });
+    },
     index(request, response, next) {
         response.json({
             msg: "Successful GET to '/' route",
             PLAID_PUBLIC_KEY: PLAID_PUBLIC_KEY,
             PLAID_ENV: PLAID_ENV,
         });
-
+    },
+    setAccessToken(request, response, next) {
+        ACCESS_TOKEN = request.body.access_token;
+        client.getItem(ACCESS_TOKEN, (error, itemResponse) => {
+            response.json({
+                item_id: itemResponse.item.item_id,
+                error: false,
+            });
+        });
     },
     getAccessToken(request, response, next) {
-        PUBLIC_TOKEN = request.body.public_token;
-        client.exchangePublicToken(PUBLIC_TOKEN, (error, tokenResponse) => {
+        // PUBLIC_TOKEN = request.body.public_token;
+        client.sandboxPublicTokenCreate(INSTITUTION_ID, INITIAL_PRODUCTS, (error, createResponse) => {
+            // Handle error, if present
             if (error != null) {
                 prettyPrintResponse(error);
                 return response.json({
                     error: error,
                 });
             }
-            ACCESS_TOKEN = tokenResponse.access_token;
-            ITEM_ID = tokenResponse.item_id;
-            prettyPrintResponse(tokenResponse);
-            response.json({
-                access_token: ACCESS_TOKEN,
-                item_id: ITEM_ID,
-                error: null,
+            PUBLIC_TOKEN = createResponse.public_token;
+            // The generated public_token can now be exchanged for an 
+            client.exchangePublicToken(PUBLIC_TOKEN, (error, tokenResponse) => {
+                if (error != null) {
+                    prettyPrintResponse(error);
+                    return response.json({
+                        error: error,
+                    });
+                }
+                ACCESS_TOKEN = tokenResponse.access_token;
+                ITEM_ID = tokenResponse.item_id;
+                prettyPrintResponse(tokenResponse);
+                response.json({
+                    access_token: ACCESS_TOKEN,
+                    item_id: ITEM_ID,
+                    error: null,
+                });
             });
         });
     },

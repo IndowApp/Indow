@@ -5,7 +5,7 @@
   "main": "backend/app.js",
   "scripts": {
     "start": "nodemon -L backend/app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha ./backend/test --timeout 10000"
   },
   "repository": {
     "type": "git",
@@ -29,5 +29,9 @@
     "nodemon": "^1.18.6",
     "plaid": "^2.9.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.0",
+    "mocha": "^5.2.0"
+  }
 }
