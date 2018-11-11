@@ -2,10 +2,10 @@
   "name": "Indow",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "backend/app.js",
   "scripts": {
-    "start": "nodemon backend/server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon -L backend/app.js",
+    "test": "mocha ./backend/test --timeout 10000"
   },
   "repository": {
     "type": "git",
@@ -26,10 +26,15 @@
     "express-handlebars": "^3.0.0",
     "mongoose": "^5.3.10",
     "morgan": "^1.9.1",
+    "mysql2": "^1.6.4",
     "nodemon": "^1.18.6",
     "pg": "^7.6.1",
     "plaid": "^2.9.0",
     "sequelize": "^4.41.1"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.0",
+    "mocha": "^5.2.0"
+  }
 }
