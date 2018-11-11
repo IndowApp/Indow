@@ -20,16 +20,16 @@ describe('Plaid', () =>{
         });
     });
 
-    // describe('/GET AccessToken', () => {
-    //     it('It should POST an AccessToken', (done) => {
-    //         chai.request(server)
-    //         .post('/plaid/get_access_token')
-    //         .end((error,results) => {
-    //                 console.log(results);
-    //             done();
-    //         });
-    //     });
-    // });
+    describe('/GET AccessToken', () => {
+        it('It should POST an AccessToken', (done) => {
+            chai.request(server)
+            .post('/plaid/get_access_token')
+            .end((error,results) => {
+                    console.log(results);
+                done();
+            });
+        });
+    });
 
 });
 
