@@ -26,8 +26,11 @@
     "express-handlebars": "^3.0.0",
     "mongoose": "^5.3.10",
     "morgan": "^1.9.1",
+    "mysql2": "^1.6.4",
     "nodemon": "^1.18.6",
-    "plaid": "^2.9.0"
+    "pg": "^7.6.1",
+    "plaid": "^2.9.0",
+    "sequelize": "^4.41.1"
   },
   "devDependencies": {
     "chai": "^4.2.0",

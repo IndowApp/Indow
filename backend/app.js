@@ -1,19 +1,24 @@
 const bodyParser = require('body-parser');
 const express = require('express');
- //Models Requirement/import 
-
-const PORT = process.env.PORT || 8000;
+const logger =require( 'morgan');
+const models = require('./models');
+const APP_PORT = process.env.PORT || 8000;
+const controllers = require('./controllers');
 
 const app = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
-
-const controllers = require('./controllers');
+app.use(logger('dev'));
 app.use(controllers);   
 
-app.listen(PORT, () => {
-    console.log(`Server is up and running on port: ${PORT}`)
+const server  = models.sequelize.sync({force: false})
+  .then(() => {
+    app.listen(APP_PORT, () => {
+      console.log(`Server is up and running on port: ${APP_PORT}`)
+    });
 });
+
+// app.use(server);
 
 module.exports = app;
