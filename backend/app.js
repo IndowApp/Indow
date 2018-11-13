@@ -1,10 +1,11 @@
+require('dotenv').config();
+
 const bodyParser = require('body-parser');
 const express = require('express');
 const logger =require( 'morgan');
 const models = require('./models');
 const APP_PORT = process.env.PORT || 8000;
 const controllers = require('./controllers');
-
 const app = express();
 
 app.use(bodyParser.json());
