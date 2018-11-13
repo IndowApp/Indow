@@ -5,13 +5,12 @@ const envvar = require('envvar');
 
 // const APP_PORT = envvar.number('APP_PORT', 8000);
 const PLAID_CLIENT_ID = envvar.string('PLAID_CLIENT_ID', '5bad7063f616450012804f45');
-const PLAID_SECRET = envvar.string('PLAID_SECRET', '14047a01e94ef5b64902601a0cadc8');
-const PLAID_PUBLIC_KEY = envvar.string('PLAID_PUBLIC_KEY', 'af3778e304e1a63b1eabb2c55bb229');
+const PLAID_SECRET =process.env.PLAID_SECRET_KEY;
+const PLAID_PUBLIC_KEY =  process.env.PLAID_SECRET_KEY;
 const PLAID_ENV = envvar.string('PLAID_ENV', 'sandbox');
 
 const INSTITUTION_ID = 'ins_9';
 const INITIAL_PRODUCTS = ['transactions','auth','income','identity'];
-
 
 let ACCESS_TOKEN = null;
 let PUBLIC_TOKEN = null;
