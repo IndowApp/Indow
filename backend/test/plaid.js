@@ -9,16 +9,16 @@ chai.use(chaiHttp);
 
 describe('Plaid', () =>{
 
-    // describe('/GET index', () => {
-    //     it('It should GET / route', (done) =>{
-    //         chai.request(server)
-    //         .get('/plaid')
-    //         .end((error,result) => {
-    //                 console.log(result);
-    //             done(); 
-    //         });
-    //     });
-    // });
+    describe('/GET index', () => {
+        it('It should GET / route', (done) =>{
+            chai.request(server)
+            .get('/plaid')
+            .end((error,result) => {
+                    console.log(result);
+                done(); 
+            });
+        });
+    });
 
     describe('/GET AccessToken', () => {
         it('It should POST an AccessToken', (done) => {
