@@ -31,5 +31,46 @@ describe('Plaid', () =>{
         });
     });
 
+    describe('/GET Accounts', () => {
+        it('It should Get user Accounts', (done) => {
+
+            chai.request(server)
+            .get('/plaid/accounts')
+            .end((error,results) => {
+                    console.log(results);
+                done();
+            });
+
+        });
+    });
+
+
+    describe('/GET Transactions', () => {
+        it('It should GET user trnasactions', (done) => {
+
+            chai.request(server)
+            .get('/plaid/transactions')
+            .end((error,results) => {
+                    console.log(results);
+                done();
+            });
+
+        });
+    });
+
+
+    describe('/GET Balance', () => {
+        it('It should GET user Balances', (done) => {
+
+            chai.request(server)
+            .get('/plaid/balance')
+            .end((error,results) => {
+                    console.log(results);
+                done();
+            });
+
+        });
+    });
+
 });
 
