@@ -2,11 +2,12 @@ const util = require('util');
 const express = require('express');
 const plaid = require('plaid');
 const envvar = require('envvar');
+const moment = require('moment');
 
 // const APP_PORT = envvar.number('APP_PORT', 8000);
 const PLAID_CLIENT_ID = envvar.string('PLAID_CLIENT_ID', '5bad7063f616450012804f45');
 const PLAID_SECRET =process.env.PLAID_SECRET_KEY;
-const PLAID_PUBLIC_KEY =  process.env.PLAID_SECRET_KEY;
+const PLAID_PUBLIC_KEY =  process.env.PLAID_PUBLIC_KEY;
 const PLAID_ENV = envvar.string('PLAID_ENV', 'sandbox');
 
 const INSTITUTION_ID = 'ins_9';
@@ -121,7 +122,7 @@ const PlaidController = {
     },
     transactions(request, response, next) {
         let startDate = moment().subtract(30, 'days').format('YYYY-MM-DD');
-        let endDate = moment().formate('YYYY-MM-DD');
+        let endDate = moment().format('YYYY-MM-DD');
         client.getTransactions(ACCESS_TOKEN, startDate, endDate, {
             count: 250,
             offset: 0,
@@ -133,9 +134,9 @@ const PlaidController = {
                 });
             } else {
                 prettyPrintResponse(transactionsResponse);
-                resposne.json({
+                response.json({
                     error: null,
-                    transactions: transactionsResponse,
+                    transactions: transactionsResponse
                 });
             }
         });
@@ -149,7 +150,7 @@ const PlaidController = {
                 });
             }
             prettyPrintResponse(balanceResponse);
-            reponse.json({
+            response.json({
                 error: null,
                 balance: balanceResponse,
             });

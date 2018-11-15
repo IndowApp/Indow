@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
 
-router.use('/plaid', require('./plaid_controller'));
+router.use('/plaid', require('./plaidController'));
 
 module.exports = router;
