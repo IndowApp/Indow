@@ -4,7 +4,9 @@
   "description": "",
   "main": "backend/app.js",
   "scripts": {
-    "start": "nodemon -L backend/app.js",
+    "start:backend": "nodemon -L backend/app.js",
+    "start:frontend": "npm start --prefix ./frontend",
+    "start:dev": "concurrently \"npm start:backend\" \"npm start:frontend\"",
     "test": "mocha ./backend/test --timeout 10000"
   },
   "repository": {
