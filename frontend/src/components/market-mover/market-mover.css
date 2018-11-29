@@ -1,0 +1,8 @@
+.marketmover h3 {
+    text-align: left;
+    font-weight: lighter;
+}
+.marketmover .marketBuy {
+    width: 150px;
+    margin: 0 10px;
+}
