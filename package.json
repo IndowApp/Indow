@@ -34,6 +34,9 @@
     "node-env-file": "^0.1.8",
     "pg": "^7.6.1",
     "plaid": "^2.9.0",
+    "react-resize-detector": "^3.2.1",
+    "react-smooth": "^1.0.2",
+    "recharts": "^1.4.1",
     "sequelize": "^4.41.1"
   },
   "devDependencies": {
