@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Expenses from './components/expenses-chart';
 
-import Transaction from './components/transaction-data';
+import Transaction from './components/transaction-data/transaction';
 
 class App extends Component {
   render() {

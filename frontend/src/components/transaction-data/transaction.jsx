@@ -2,6 +2,7 @@
 
 import React, { Component } from 'react';
 import './transaction.css';
+import axios from 'axios'; 
 
 class Transaction extends Component {
     constructor(props){
@@ -12,7 +13,6 @@ class Transaction extends Component {
     }
     componentDidMount() {
       fetch('/plaid/transactions')
-        .then(response => response.json())
         .then(body => console.log('Is there a body? ', (body!=null)));
     }
 
