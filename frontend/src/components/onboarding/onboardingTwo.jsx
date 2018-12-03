@@ -10,8 +10,8 @@ class OnboardingTwo extends Component {
                 <h1>Know where you spend</h1>
                 <p>We break down your expenses to make it easy for you to decide where to cut back</p>
                 <Router>
-                    <Route path="/what" component={onboardingThree} />
-                    <Link to="/what">Users</Link>
+                    <Route path="/invest" component={onboardingThree} />
+                    <Link to="/invest">Users</Link>
                 </Router>
             </div>
         );
