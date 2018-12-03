@@ -11,7 +11,7 @@ class Onboarding extends Component {
                 <p>Indow is here to help you grow capital and organize your financial life</p>
                 <Router>
                     <div>
-                        <Route path="/spend" component={OnboardingTwo} />
+                        <Route exact path="/spend" component={OnboardingTwo} />
                         <Link to="/spend">Users</Link>
                     </div>
                 </Router>

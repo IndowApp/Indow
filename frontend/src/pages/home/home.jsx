@@ -10,7 +10,7 @@ class Home extends Component {
         return (
             <div className="home">
                 <SideBar />
-                <div class="mainbody">
+                <div className="mainbody">
                 <Goals />
                 <MarketMover /> 
                 </div>
