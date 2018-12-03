@@ -1,0 +1,14 @@
+.onboarding {
+    width: 100vw;
+    height: 100vh;
+    margin-top: -35px;
+}
+.onboardingOne {
+    background: purple;
+}
+.onboardingTwo {
+    background: pink;
+}
+.onboardingThree {
+    background: yellow;
+}
