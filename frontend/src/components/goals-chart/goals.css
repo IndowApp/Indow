@@ -1,7 +1,25 @@
+.goals {
+    margin-left: 100px;
+}
 .goals h3 {
     text-align: left;
-    font-weight: lighter;
+    margin-top: 0;
+    font-weight: 400;
+    color: #282c34;
 }
 .goalsChart {
-    font-weight: normal;
+    color: #f6f6f6;
+}
+.recharts-surface {
+    font-size: 16px;
+    font-family: Lato, sans-serif;
+}
+.recharts-cartesian-grid line {
+    display: none;
+}
+.recharts-cartesian-axis-line {
+    display: none;
+}
+.recharts-default-legend {
+    display: none;
 }

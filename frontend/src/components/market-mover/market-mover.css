@@ -1,8 +1,18 @@
+.marketmover {
+    margin-left: 100px;
+}
 .marketmover h3 {
     text-align: left;
-    font-weight: lighter;
+    font-weight: 400;
+    color: #282c34;
 }
 .marketmover .marketBuy {
     width: 150px;
     margin: 0 10px;
+    box-shadow: 0px 3px 5px 0px lightgrey;
+    background: white;
+    border: none;
+}
+.marketBuy:hover {
+    box-shadow: 0px 1px 0px 0px lightgrey;
 }
