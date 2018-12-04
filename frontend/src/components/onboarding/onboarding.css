@@ -1,14 +1,51 @@
 .onboarding {
     width: 100vw;
     height: 100vh;
-    margin-top: -35px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-family: "Roboto", sans-serif;
+    padding-top: 30px;
+}
+.onboarding p {
+    font-size: 23px;
+    width: 35%;
+    margin: auto;
+    font-weight: 600;
 }
 .onboardingOne {
-    background: purple;
+    background: #34cacc;
 }
 .onboardingTwo {
-    background: pink;
+    background: #00a7a5;
+}
+.onboardingTwo p, .onboardingThree p {
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 .onboardingThree {
-    background: yellow;
+    /* background: linear-gradient(#fca300, #e56500); */
+    background: #60b8bf;
+}
+.iconCredit {
+    width: 15%;
+    float: right;
+    font-size: 10px;
+}
+.iconCredit a {
+    color: white;
+}
+/* images and icons */
+.onboardingArrow {
+    margin-top: 20px;
+    width: 3%;
+}
+.onboardingArrow:hover {
+    opacity: 0.5;
+}
+.onboardingImage1 {
+    width: 30%;
+}
+.onboardingImage3 {
+    width: 25%;
 }
