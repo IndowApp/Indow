@@ -13,16 +13,8 @@ class Onboarding extends Component {
                 <img src={organizingFinances} className="onboardingImage1" alt="organizing finances illustration" />
                 <p>Indow is here to help you grow capital and organize your financial life</p>
                     <div>
-<<<<<<< HEAD
-                        <Link to="/spend">Users</Link>
-                    </div>
-=======
-                        <Route exact path="/onboarding-2" component={OnboardingTwo} />
                         <Link to="/onboarding-2"><img src={arrow} className="onboardingArrow" alt="next page" /></Link>
                     </div>
-                </Router>
-                <div class="iconCredit">Icons made by <a href="https://www.flaticon.com/authors/rami-mcmin" title="Rami McMin">Rami McMin</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 	title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
->>>>>>> a576095d8fa4991fb0e93818288a996dd4ef0a2e
             </div>
             
         );
