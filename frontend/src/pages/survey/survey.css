@@ -1,9 +1,11 @@
 .surveyWrapper {
-    background: pink;
+    background: #F2F3F4  ;
     width: 100vw;
     height: 100vh;
     margin-top: -20px;
     padding: 50px;
     color: black;
     font-size: 16px;
+    font-family: "Mukta";
+    font-weight: 300;
 }
