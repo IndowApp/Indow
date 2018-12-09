@@ -6,11 +6,11 @@ import './goals.css'
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 
 const data = [
-    {name: 'November 2018', pv: 50, uv:350},
-    {name: 'Drinks & Food', pv: 150, uv:125},
-    {name: 'Groceries', pv: 250, uv:52},
-    {name: 'Transportation', pv: 350, uv:20},
-    {name: 'Invested', pv: 450, uv:100},
+    {name: 'November 2018', pv: 150},
+    {name: 'Drinks & Food', pv: 160},
+    {name: 'Groceries', pv: 250},
+    {name: 'Transportation', pv: 350},
+    {name: 'Invested', pv: 450},
     
 ];
 class Goals extends Component {

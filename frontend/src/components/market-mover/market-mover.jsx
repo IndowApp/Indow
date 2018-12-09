@@ -71,9 +71,9 @@ class MarketMover extends Component {
         return (
             <div className="marketmover">
                 <h3>Market Mover</h3>
-                <button className="marketBuy"><MarketMoverCard company='aapl'/><button>+Buy</button></button>
-                <button className="marketBuy"><MarketMoverCard company='pegi'/><button>+Buy</button></button>
-                <button className="marketBuy"><MarketMoverCard company='jnj'/><button>+Buy</button></button>
+                <a href='http://www.apple.com' target="_blank" rel="noopener noreferrer"><button className="marketBuy"><MarketMoverCard company='aapl'/><button>+Buy</button></button></a>
+                <a href='http://www.patternenergy.com' target="_blank" rel="noopener noreferrer"><button className="marketBuy"><MarketMoverCard company='pegi'/><button>+Buy</button></button></a>
+                <a href='http://www.jnj.com' target="_blank" rel="noopener noreferrer"><button className="marketBuy"><MarketMoverCard company='jnj'/><button>+Buy</button></button></a>
             </div>
         );
     }
