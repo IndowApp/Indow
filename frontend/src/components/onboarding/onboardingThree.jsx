@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './onboarding.css';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import Home from '../../pages/home/home';
+import { BrowserRouter as Link } from "react-router-dom";
+// import Home from '../../pages/home/home';
 import arrow from '../../images/right-arrow-circular-button.svg'
 import piggyBank from '../../images/fist_full_of_coins.jpg'
 

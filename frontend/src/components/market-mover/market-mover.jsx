@@ -3,15 +3,77 @@
 import React, { Component } from 'react';
 import '../../index.css';
 import './market-mover.css'
+import axios from 'axios'; 
+
+class MarketMoverCard extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            name : [],
+            price : 0, 
+            company : this.props.company            
+        };
+    }
+
+    getMarketMoverData = (company) => {
+        axios.get('https://api.iextrading.com/1.0/stock/' + company + '/company')
+        .then(
+            res => {
+                let data = res.data; 
+                this.setState({name : data}); 
+                console.log(this.state.name); 
+
+            })
+        .catch(err => {
+            console.log(err);
+        });
+    }
+
+    getMarketMoverPrice = (company) => {
+        axios.get('https://api.iextrading.com/1.0/stock/' + company + '/price')
+        .then(
+            res => { 
+                let price = res
+                this.setState({price : price.data}); 
+                console.log(this.state.marketCardPrice);
+            })
+        .catch(err => {
+            console.log(err);
+        });
+    }
+
+    componentDidMount() {
+        console.log('component mounted'); 
+        this.getMarketMoverData(this.props.company);
+        this.getMarketMoverPrice(this.props.company);
+    }
+
+    render() {
+        return(
+            <div>
+                <h3>{this.state.name.companyName}</h3>
+                <p>{this.state.name.sector}</p>
+                <p>${this.state.price}</p>
+            </div>
+        )
+    }
+}
 
 class MarketMover extends Component {
+    constructor(props){
+        super(props); 
+        this.state = {
+           
+        }
+    }
+
     render () {
         return (
             <div className="marketmover">
                 <h3>Market Mover</h3>
-                <button className="marketBuy"><h3>Google</h3><p>$2,00</p><button>+Buy</button></button>
-                <button className="marketBuy"><h3>Facebook</h3><p>$50c</p><button>+Buy</button></button>
-                <button className="marketBuy"><h3>Walmart</h3><p>$1,000</p><button>+Buy</button></button>
+                <a href='http://www.apple.com' target="_blank" rel="noopener noreferrer"><button className="marketBuy"><MarketMoverCard company='aapl'/><button>+Buy</button></button></a>
+                <a href='http://www.patternenergy.com' target="_blank" rel="noopener noreferrer"><button className="marketBuy"><MarketMoverCard company='pegi'/><button>+Buy</button></button></a>
+                <a href='http://www.jnj.com' target="_blank" rel="noopener noreferrer"><button className="marketBuy"><MarketMoverCard company='jnj'/><button>+Buy</button></button></a>
             </div>
         );
     }

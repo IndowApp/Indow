@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import Onboarding from './components/onboarding/onboardingOne';
 import OnboardingTwo from './components/onboarding/onboardingTwo';
 import OnboardingThree from './components/onboarding/onboardingThree';
