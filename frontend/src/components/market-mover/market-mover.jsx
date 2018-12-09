@@ -8,29 +8,11 @@ import axios from 'axios';
 class MarketMoverCard extends Component {
     constructor(props){
         super(props);
-        this.state = {};
-    }
-
-    render() {
-        let name = this.props.cardName;
-        let price = this.props.cardPrice; 
-        return(
-            <div>
-                <h3>{name.companyName}</h3>
-                <p>{name.website}</p>
-                <p>${price}</p>
-            </div>
-        )
-    }
-}
-
-class MarketMover extends Component {
-    constructor(props){
-        super(props); 
         this.state = {
-            marketCardName : [],
-            marketCardPrice : 0
-        }
+            name : [],
+            price : 0, 
+            company : this.props.company            
+        };
     }
 
     getMarketMoverData = (company) => {
@@ -38,8 +20,8 @@ class MarketMover extends Component {
         .then(
             res => {
                 let data = res.data; 
-                this.setState({marketCardName : data}); 
-                console.log(this.state.marketCardName); 
+                this.setState({name : data}); 
+                console.log(this.state.name); 
 
             })
         .catch(err => {
@@ -52,7 +34,7 @@ class MarketMover extends Component {
         .then(
             res => { 
                 let price = res
-                this.setState({marketCardPrice : price.data}); 
+                this.setState({price : price.data}); 
                 console.log(this.state.marketCardPrice);
             })
         .catch(err => {
@@ -62,18 +44,36 @@ class MarketMover extends Component {
 
     componentDidMount() {
         console.log('component mounted'); 
-        this.getMarketMoverData('aapl');
-        this.getMarketMoverPrice('aapl');
+        this.getMarketMoverData(this.props.company);
+        this.getMarketMoverPrice(this.props.company);
     }
 
+    render() {
+        return(
+            <div>
+                <h3>{this.state.name.companyName}</h3>
+                <p>{this.state.name.sector}</p>
+                <p>${this.state.price}</p>
+            </div>
+        )
+    }
+}
+
+class MarketMover extends Component {
+    constructor(props){
+        super(props); 
+        this.state = {
+           
+        }
+    }
 
     render () {
         return (
             <div className="marketmover">
                 <h3>Market Mover</h3>
-                <button className="marketBuy"><MarketMoverCard cardName={this.state.marketCardName} cardPrice={this.state.marketCardPrice}/><button>+Buy</button></button>
-                <button className="marketBuy"><h3>Facebook</h3><p>$50c</p><button>+Buy</button></button>
-                <button className="marketBuy"><h3>Walmart</h3><p>$1,000</p><button>+Buy</button></button>
+                <button className="marketBuy"><MarketMoverCard company='aapl'/><button>+Buy</button></button>
+                <button className="marketBuy"><MarketMoverCard company='pegi'/><button>+Buy</button></button>
+                <button className="marketBuy"><MarketMoverCard company='jnj'/><button>+Buy</button></button>
             </div>
         );
     }
