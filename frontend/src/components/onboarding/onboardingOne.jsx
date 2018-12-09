@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import './onboarding.css';
 import '../../index.css'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import OnboardingTwo from './onboardingTwo';
 import organizingFinances from '../../images/organizing_finances.jpg'
 import arrow from '../../images/right-arrow-circular-button.svg'
+
 class Onboarding extends Component {
     render () {
         return (

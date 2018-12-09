@@ -1,0 +1,9 @@
+.surveyWrapper {
+    background: pink;
+    width: 100vw;
+    height: 100vh;
+    margin-top: -20px;
+    padding: 50px;
+    color: black;
+    font-size: 16px;
+}

@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Onboarding from './components/onboarding/onboardingOne';
 import OnboardingTwo from './components/onboarding/onboardingTwo';
 import OnboardingThree from './components/onboarding/onboardingThree';
+import Survey from './pages/survey/survey';
 import Home from './pages/home/home';
 
 class App extends Component {
@@ -18,6 +19,7 @@ class App extends Component {
                 <Route exact path='/onboarding' component={Onboarding} />
                 <Route exact path='/onboarding-2' component={OnboardingTwo} />
                 <Route exact path='/onboarding-3' component={OnboardingThree} /> 
+                <Route exact path='/survey' component={Survey} /> 
               </div>
             </Router>
         </header>

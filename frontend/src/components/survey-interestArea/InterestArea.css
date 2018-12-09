@@ -1,0 +1,46 @@
+.interestArea-wrapper {
+    width: 80%;
+    margin: auto;
+    background: lightblue;
+    font-family: "Mukta";
+    font-weight: 300;
+}
+.interestArea-wrapper .slick-next {
+    right: 0px;
+}
+.interestArea-wrapper .slick-prev {
+    left: 0px;
+}
+.slideWrapper {
+    width: 920px !important;
+}
+.smallSlider {
+    width: 660px !important;
+}
+.interestArea {
+    width: 200px;
+    height: 400px;
+    float: left;
+    padding: 10px 30px;
+    margin: 0 20px;
+    background: white;
+    border: solid yellow 3px;
+    border-radius: 10px;
+}
+.interestArea h2 {
+    margin-top: 0px;
+    font-size: 20px;
+}
+.interestArea .smallTitle {
+    font-size: 18px;
+}
+.interestArea img {
+    width: 40%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.companyType {
+    font-weight: 600;
+    font-size: 14px;
+}
