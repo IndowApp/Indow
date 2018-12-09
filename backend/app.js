@@ -11,7 +11,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(logger('dev'));
-app.use(controllers);   
+app.use('/api', controllers);   
 
 const server  = models.sequelize.sync({force: false})
   .then(() => {

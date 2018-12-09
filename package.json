@@ -5,9 +5,10 @@
   "main": "backend/app.js",
   "scripts": {
     "start:backend": "nodemon -L backend/app.js",
-    "start:frontend": "npm start --prefix ./frontend",
+    "start:frontend": "npm start --prefix ./frontend/app.js",
     "start:dev": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
-    "test": "mocha ./backend/test --timeout 10000"
+    "test": "mocha ./backend/test --timeout 10000",
+    "start": "nodemon -L ./backend/app.js"
   },
   "repository": {
     "type": "git",
