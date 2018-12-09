@@ -23,7 +23,7 @@ export default Home;
 // once ready to make responsive use this code for the sidebar
 //replace this code for SideBar inside the return call
  
-{/* <Sidebar
+/* <Sidebar
         sidebar={<b>Sidebar content</b>}
         open={this.state.sidebarOpen}
         onSetOpen={this.onSetSidebarOpen}
@@ -32,7 +32,7 @@ export default Home;
         <button onClick={() => this.onSetSidebarOpen(true)}>
           Open sidebar
         </button>
-        </Sidebar> */}
+        </Sidebar> */
 
 //place this code just below the class header
 
