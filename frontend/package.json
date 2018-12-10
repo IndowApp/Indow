@@ -4,6 +4,7 @@
   "proxy": "http://localhost:8000/",
   "private": true,
   "dependencies": {
+    "antd": "^3.11.1",
     "react": "^16.6.1",
     "react-dom": "^16.6.1",
     "react-resize-detector": "^3.2.1",
