@@ -20,7 +20,7 @@ class RiskLevel extends Component {
         const nextColor = value >= mid ? '' : 'red';
         return (
             <div className="riskLevel-wrapper">
-            <h2>Risk Level</h2>
+            <h1>Risk Level</h1>
             <p>From conservative to high risk taker, where would you place yourself in the risk scale?</p>
             <div className="icon-wrapper">
         <Icon style={{ color: preColor }} type="safety" />

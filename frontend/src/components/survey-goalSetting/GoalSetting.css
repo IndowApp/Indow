@@ -1,0 +1,14 @@
+.goalSetting-wrapper {
+    background: white;
+    margin: auto;
+}
+.goalSetting-wrapper .ant-row {
+    width: 60%;
+    margin: auto !important;
+}
+.goalSetting-wrapper .ant-row h4 {
+    text-align: left;
+}
+.goalSetting-wrapper .ant-col-12 {
+    width: 80%;
+}

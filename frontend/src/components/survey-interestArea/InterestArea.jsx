@@ -28,7 +28,8 @@ class InterestArea extends Component {
             <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
             <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />   
                <div>
-                <h2>Which sectors of the financial market interest you the most?</h2>
+                <h1>Areas of Interest</h1>
+                <h3>Which sectors of the financial market interest you the most?</h3>
                 <p>Pick as many as you like</p>
                 <Slider {...settings}>
                     {/* slide 1 */}
