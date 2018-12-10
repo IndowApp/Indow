@@ -2,9 +2,9 @@
     width: 25%;
     height: 100vh;
     background: #f6f6f6;
-    position: fixed;
+    position: fixed; 
     left: 0;
-    top: 0;
+    top: 10px;
 }
 .sidebar button {
     width: 100%;
@@ -20,4 +20,16 @@
 .sidebar button h3 {
     font-size: 18px;
     font-weight: 300;
+}
+
+.sidebar .logo {
+    display: inline;
+}
+
+.sidebar .logo .Text{
+    float: right;
+    color: #12b92ecc;
+    font-family: 'Concert One', cursive;
+    font-size: 75px;
+    margin-top: -10px;
 }

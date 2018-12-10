@@ -15,7 +15,7 @@ class OnboardingThree extends Component {
             {/* <p>Indow suggests investments based on your preferences, so that you will grow your capital in a meaningful way</p> */}
                     <div>
                     {/* <Route path="/" component={Home} /> */}
-                    <Link to="/"><img src={arrow} className="onboardingArrow" alt="next page" /></Link>
+                    <Link to="/survey"><img src={arrow} className="onboardingArrow" alt="next page" /></Link>
                     </div>
                 {/* <div class="iconCredit">Icons made by <a href="https://www.flaticon.com/authors/rami-mcmin" title="Rami McMin">Rami McMin</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 	title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> */}
             </div>

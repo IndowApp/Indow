@@ -3,3 +3,8 @@
     margin-top: 0px;
     margin-left: 50px;
   }
+
+  .sidebar {
+    float: left; 
+    /* position: fixed; */
+  }

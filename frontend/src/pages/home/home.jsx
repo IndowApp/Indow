@@ -9,10 +9,12 @@ class Home extends Component {
     render () {
         return (
             <div className="home">
-                <SideBar />
+                <div className="sidebar">
+                    <SideBar />
+                </div>
                 <div className="mainbody">
-                <Goals />
-                <MarketMover /> 
+                    <Goals />
+                    <MarketMover /> 
                 </div>
             </div>
         );
