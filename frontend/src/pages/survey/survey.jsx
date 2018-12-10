@@ -8,8 +8,9 @@ class Survey extends Component {
         return (
             <div className="surveyWrapper">
             <link href="https://fonts.googleapis.com/css?family=Mukta:300,600" rel="stylesheet" />
-               <InterestArea />
-               <RiskLevel />
+               <div><InterestArea /></div>
+               <br/>
+               <div><RiskLevel /></div>
             </div>
         );
     }

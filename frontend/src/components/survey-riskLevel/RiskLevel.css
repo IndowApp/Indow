@@ -1,4 +1,39 @@
-.surveyWrapper {
-    font-family: "Mukta";
-    font-weight: 300;
+.riskLevel-wrapper {
+    background: white;
+    width: 83%;
+    min-height: 100px; 
+    margin: auto;
+    padding: 30px 0px;
+
 }
+.icon-wrapper {
+    position: relative;
+    padding: 0px 30px;
+    width: 80%;
+    margin: auto;
+  }
+  .icon-wrapper .anticon {
+    position: absolute;
+    top: -15px;
+    width: 16px;
+    height: 16px;
+    line-height: 1;
+    font-size: 40px;
+    color: rgba(0, 0, 0, .25);
+  }
+  .icon-wrapper .anticon:first-child {
+    left: -7px;
+  }
+  .icon-wrapper .anticon:last-child {
+    right: 0px;
+  }
+  .ant-slider-handle {
+      width: 20px !important;
+      height: 20px !important;
+      background: #48C9B0 !important;
+      border: solid #48C9B0 2px !important;
+      top: 0px !important;
+  }
+  .ant-slider-track {
+    background-image: linear-gradient(to left, red , yellow);
+  }
