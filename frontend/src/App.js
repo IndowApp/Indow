@@ -12,6 +12,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Raleway:800" rel="stylesheet"/>
         <header className="App-header">
             <Router>
               <div>

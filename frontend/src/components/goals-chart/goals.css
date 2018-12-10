@@ -12,7 +12,6 @@
 }
 .recharts-surface {
     font-size: 16px;
-    font-family: Lato, sans-serif;
 }
 .recharts-cartesian-grid line {
     display: none;

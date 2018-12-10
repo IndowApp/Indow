@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
+import "antd/dist/antd.css";
 import './RiskLevel.css';
 import { Slider, Icon } from 'antd';
-import "antd/dist/antd.css";
 
 class RiskLevel extends Component {
     state = {
