@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './onboarding.css';
-import { BrowserRouter as Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 // import onboardingThree from './onboardingThree';
 import expensesAnalytics from '../../images/expense_analytics.jpg'
 import arrow from '../../images/right-arrow-circular-button.svg'
