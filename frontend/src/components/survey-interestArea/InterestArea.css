@@ -47,7 +47,7 @@
     font-size: 14px;
 }
 /* area colors */
-.interestArea.financials { border: solid #48C9B0 20px;}
+#financials { border: solid #48C9B0 20px;}
 .interestArea.utilities { border: solid #F4D03F 20px;}
 .interestArea.consumerDiscretionary { border: solid #EC7063 20px;}
 .interestArea.consumerStaples { border: solid #EB984E 20px;}
