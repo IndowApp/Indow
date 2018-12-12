@@ -29,6 +29,13 @@ const images = {
 };
 
 class InterestCard extends Component{
+    /*
+        Props: 
+        sector (string) - financials, materials, realEstate, etc
+        companyType (string) - e.g if financials, companyType = Banks, Insurance companies
+        info (string) - 1 sentence summary of this sector
+
+    */
     constructor(props){
         super(props); 
         this.state = {
@@ -45,7 +52,7 @@ class InterestCard extends Component{
         return(
             <div className="interestArea"  id={this.props.sector} onClick={this.onClick}>
                 <h2>{this.props.sector}</h2>
-                <img src={safeBox} className="" alt="Money safe illustration" />
+                <img src={images[this.props.sector]} className="" alt="Money safe illustration" />
                 <p className="companyType">{this.props.companyType}</p>
                 <p>{this.props.info}</p>
             </div>
