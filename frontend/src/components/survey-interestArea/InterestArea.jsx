@@ -23,10 +23,11 @@ class InterestArea extends Component {
             slidesToShow: 1,
             slidesToScroll: 1
           };
+          
         return (
             <div className="interestArea-wrapper">
             <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
-            <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />   
+            <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
                <div>
                 <h2>Areas of Interest</h2>
                 <h4>Which sectors of the financial market interest you the most?</h4>
@@ -79,13 +80,13 @@ class InterestArea extends Component {
                         <div className="interestArea industrials">
                             <h2>Industrials</h2>
                             <img src={factory} className="" alt="Money safe illustration" />
-                            <p className="companyType">Aerospace, defense, machinery, construction, fabrication and manufacturing companies</p>
+                            <p className="companyType">Aerospace, defense, machinery, construction, and manufacturing companies</p>
                             <p>In general, the industry’s growth is driven by demand for building construction and manufactured products like agricultural equipment.</p>
                         </div>
                         <div className="interestArea technology">
                             <h2>Technology</h2>
                             <img src={technology} className="" alt="Money safe illustration" />
-                            <p className="companyType">Electronics manufacturers, software developers and information technology firms</p>
+                            <p className="companyType">Electronics manufacturers, software, and information technology firms</p>
                             <p>These businesses are driven by upgrade cycles and the general health of the economy, although growth has been robust over the years.</p>
                         </div>
                         <div className="interestArea telecom">
@@ -101,7 +102,7 @@ class InterestArea extends Component {
                             <h2>Materials</h2>
                             <img src={mine} className="" alt="Money safe illustration" />
                             <p className="companyType">Mining, refining, chemical, and forestry companies </p>
-                            <p>These comanies are focused on discovering and developing raw materials. Since they are at the beginning of the supply chain, they are vulnerable to changes in the business cycle.</p>
+                            <p>Firms focused on discovering raw materials. These are at the beginning of the supply chain, making them vulnerable to changes in the business cycle.</p>
                         </div>
                         <div className="interestArea realEstate">
                             <h2>Real Estate</h2>

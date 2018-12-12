@@ -18,14 +18,14 @@ class Goals extends Component {
   	return (
         <div className="goals">
           <h3>Your Goals</h3>
-    	    <BarChart width={600} height={300} data={data} layout="vertical"
+    	    <BarChart width={700} height={300} data={data} layout="vertical"
             margin={{top: 5, right: 30, left: 35, bottom: 5}}>
        <CartesianGrid strokeDasharray="3 3"/>
        <XAxis type="number"/>
        <YAxis type="category" dataKey="name"/>
        <Tooltip/>
        <Legend />
-       <Bar dataKey="pv" fill="#8884d8" background={{ fill: '#eee' }} />
+       <Bar dataKey="pv" fill="#62D2A2" background={{ fill: '#eee' }} />
       </BarChart>
         </div>
     );

@@ -27,17 +27,10 @@
     /* background: linear-gradient(#fca300, #e56500); */
     background: #60b8bf;
 }
-.iconCredit {
-    width: 15%;
-    float: right;
-    font-size: 10px;
-}
-.iconCredit a {
-    color: white;
-}
 /* images and icons */
 .onboardingArrow {
-    margin-top: 20px;
+    position: absolute;
+    bottom: 80px;
     width: 3%;
 }
 .onboardingArrow:hover {

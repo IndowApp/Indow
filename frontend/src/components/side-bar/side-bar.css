@@ -2,8 +2,8 @@
     width: 25%;
     height: 100vh;
     background: #f6f6f6;
-    position: fixed; 
-    left: 0;
+    /* position: fixed;  */
+    float: left;
     top: 10px;
     color: #282c34;
 }
@@ -27,23 +27,4 @@
 .sidebar button p {
     font-weight: 600;
     font-size: 14px;
-}
-.logo {
-    color: #62d2a2;
-    border-radius: 3px;
-    margin: -5px 3px 5px 3px;
-    margin-left: 5px;
-    margin-top: -5px;
-}
-.logo img{
-    display: inline;
-    margin: 7px 3px 0px 10px;
-    width: 35px;
-}
-.sidebar .logo-text{
-    font-family: 'Raleway', sans-serif;
-    font-size: 40px;
-    margin-top: 0px;
-    margin-bottom: 0;
-    text-align: left;
 }

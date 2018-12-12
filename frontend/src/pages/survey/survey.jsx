@@ -9,8 +9,8 @@ class Survey extends Component {
         return (
             <div className="surveyWrapper">
                 <div className="surveyMessage">
-                    <h1>Let's get started</h1>
-                    <h2>Tell us a bit more about your financial interests and your investing goals</h2>
+                    <h1>Let's get started!</h1>
+                    <h2>Tell us a bit more about your financial interests and your investing goals:</h2>
                 </div>
                 <div><InterestArea /></div>
                 <br/>

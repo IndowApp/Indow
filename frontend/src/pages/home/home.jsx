@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
 import './home.css';
+import Header from '../../components/header/header';
 import Goals from '../../components/goals-chart/goals-chart';
 import SideBar from '../../components/side-bar/side-bar';
 import MarketMover from '../../components/market-mover/market-mover';
+
 //import Sidebar from "react-sidebar"; -> for responsive sidebar
 
 class Home extends Component {
     render () {
         return (
             <div className="home">
-                <div className="sidebar">
+                <Header />
+                <div>
                     <SideBar />
                 </div>
                 <div className="mainbody">

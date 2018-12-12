@@ -17,6 +17,9 @@
 .slideWrapper {
     width: 920px !important;
 }
+.slideWrapper:focus {
+    outline: none !important;
+}
 .smallSlider {
     width: 660px !important;
 }
@@ -28,6 +31,9 @@
     margin: 0 10px;
     background: white;
     border-radius: 40px;
+}
+.interestArea:hover {
+    box-shadow: 4px 4px 3px 0px #2E4053;
 }
 .interestArea h2 {
     margin-top: 0px;

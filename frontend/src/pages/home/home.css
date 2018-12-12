@@ -1,10 +1,10 @@
 .home {
     margin: auto;
     margin-top: 0px;
-    margin-left: 50px;
+    width: 100vw;
   }
-
-  .sidebar {
-    float: left; 
-    /* position: fixed; */
+  .mainbody {
+    width: 70%;
+    float: left;
+    padding-top: 30px;
   }

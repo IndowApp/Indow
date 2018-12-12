@@ -11,7 +11,8 @@
     color: #f6f6f6;
 }
 .recharts-surface {
-    font-size: 16px;
+    font-size: 14px;
+    font-weight: bold;
 }
 .recharts-cartesian-grid line {
     display: none;
@@ -21,4 +22,16 @@
 }
 .recharts-default-legend {
     display: none;
+}
+.recharts-layer {
+    width: 50px;
+} 
+.recharts-cartesian-axis {
+    width: 50px;
+}
+.recharts-yAxis {
+    width: 50px;
+} 
+.yAxis {
+    width: 50px;
 }

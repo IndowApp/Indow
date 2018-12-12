@@ -1,0 +1,30 @@
+.header {
+    width: 100%;
+    background: #6292D2;
+    color: white;
+    padding: 15px 0px 5px 0px;
+    text-align: left;
+}
+.logo {
+    border-radius: 3px;
+    margin: -5px 3px 5px 3px;
+    margin-left: 5px;
+    margin-top: -5px;
+}
+.logo img{
+    display: inline;
+    margin: 7px 3px 0px 10px;
+    width: 35px;
+}
+.logo-text{
+    font-family: 'Raleway', sans-serif;
+    font-size: 40px;
+    margin-top: 0px;
+    margin-bottom: 0;
+    display: inline;
+}
+.logo p {
+    font-size: 12px;
+    font-weight: 700;
+    display: inline;
+}
