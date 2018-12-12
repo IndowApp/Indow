@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import './survey.css';
 import InterestArea from '../../components/survey-interestArea/InterestArea';
 import RiskLevel from '../../components/survey-riskLevel/RiskLevel';
-import GoalSetting from '../../components/survey-goalSetting/GoalSetting'
+import GoalSetting from '../../components/survey-goalSetting/GoalSetting';
+import Submit from '../../components/survey-submit/submit';
 
 class Survey extends Component {
     render () {
@@ -17,6 +18,8 @@ class Survey extends Component {
                 <div><RiskLevel /></div>
                 <br />
                 <div><GoalSetting /></div>
+                <br />
+                <div><Submit/></div>
             </div>
         );
     }

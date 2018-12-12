@@ -53,14 +53,14 @@
     font-size: 14px;
 }
 /* area colors */
-.interestArea.financials { border: solid #48C9B0 20px;}
-.interestArea.utilities { border: solid #F4D03F 20px;}
-.interestArea.consumerDiscretionary { border: solid #EC7063 20px;}
-.interestArea.consumerStaples { border: solid #EB984E 20px;}
-.interestArea.energy { border: solid #5D6D7E 20px;}
-.interestArea.healthcare { border: solid #E74C3C 20px;}
-.interestArea.industrials { border: solid #F39C12 20px;}
-.interestArea.technology { border: solid #3498DB 20px;}
-.interestArea.telecom { border: solid #8E44AD 20px;}
-.interestArea.materials { border: solid #34495E 20px;}
-.interestArea.realEstate { border: solid #16A085 20px;}
+#Financials { border: solid #48C9B0 20px;}
+#Utilities { border: solid #F4D03F 20px;}
+#Non-Essentials { border: solid #EC7063 20px;}
+#Essentials { border: solid #EB984E 20px;}
+#Energy { border: solid #5D6D7E 20px;}
+#Healthcare { border: solid #E74C3C 20px;}
+#Industrials { border: solid #F39C12 20px;}
+#Technology { border: solid #3498DB 20px;}
+#Telecom { border: solid #8E44AD 20px;}
+#Materials { border: solid #34495E 20px;}
+#RealEstate { border: solid #16A085 20px;}
