@@ -7,7 +7,12 @@ import MarketMover from '../../components/market-mover/market-mover';
 
 //import Sidebar from "react-sidebar"; -> for responsive sidebar
 
+
 class Home extends Component {
+    componentDidMount(){
+        window.scrollTo(0,0);
+    }
+    
     render () {
         return (
             <div className="home">
