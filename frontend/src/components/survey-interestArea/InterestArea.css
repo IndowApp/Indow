@@ -54,13 +54,31 @@
 }
 /* area colors */
 #Financials { border: solid #48C9B0 20px;}
+#FinancialsToggled { border: solid #48C9B0 20px; background-color: #48C9B0; color : white; font-weight: bold; }
+
 #Utilities { border: solid #F4D03F 20px;}
+#UtilitiesToggled { border: solid #F4D03F 20px; background-color: #F4D03F; color : white; font-weight: bold; }
+
 #Non-Essentials { border: solid #EC7063 20px;}
+#Non-EssentialsToggled { border: solid #EC7063 20px; background-color: #EC7063; color : white; font-weight: bold; }
+
 #Essentials { border: solid #EB984E 20px;}
+#EssentialsToggled { border: solid #EB984E 20px; background-color: #EB984E; color : white; font-weight: bold; }
+
 #Energy { border: solid #5D6D7E 20px;}
-#Healthcare { border: solid #E74C3C 20px;}
+#EnergyToggled { border: solid #5D6D7E 20px; background-color: #5D6D7E; color : white; font-weight: bold; }
+
 #Industrials { border: solid #F39C12 20px;}
+#IndustrialsToggled { border: solid #F39C12 20px; background-color: #F39C12; color : white; font-weight: bold; }
+
 #Technology { border: solid #3498DB 20px;}
+#TechnologyToggled { border: solid #3498DB 20px; background-color: #3498DB; color : white; font-weight: bold; }
+
 #Telecom { border: solid #8E44AD 20px;}
+#TelecomToggled { border: solid #8E44AD 20px; background-color: #8E44AD; color : white; font-weight: bold; }
+
 #Materials { border: solid #34495E 20px;}
+#MaterialsToggled { border: solid #34495E 20px; background-color: #34495E; color : white; font-weight: bold; }
+
 #RealEstate { border: solid #16A085 20px;}
+#RealEstateToggled { border: solid #16A085 20px; background-color: #16A085; color : white; font-weight: bold; }

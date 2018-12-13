@@ -49,8 +49,9 @@ class InterestCard extends Component{
     }
 
     render() {
+        let ext = this.state.isClicked ? 'Toggled' : ''; 
         return(
-            <div className="interestArea"  id={this.props.sector} onClick={this.onClick}>
+            <div className="interestArea"  id={this.props.sector + ext} onClick={this.onClick}>
                 <h2>{this.props.sector}</h2>
                 <img src={images[this.props.sector]} className="" alt="Money safe illustration" />
                 <p className="companyType">{this.props.companyType}</p>
