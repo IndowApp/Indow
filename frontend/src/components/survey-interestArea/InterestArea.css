@@ -62,11 +62,14 @@
 #Non-Essentials { border: solid #EC7063 20px;}
 #Non-EssentialsToggled { border: solid #EC7063 20px; background-color: #EC7063; color : white; font-weight: bold; }
 
-#Essentials { border: solid #EB984E 20px;}
-#EssentialsToggled { border: solid #EB984E 20px; background-color: #EB984E; color : white; font-weight: bold; }
+#Essentials { border: solid #5DADE2 20px;}
+#EssentialsToggled { border: solid #5DADE2 20px; background-color: #5DADE2; color : white; font-weight: bold; }
 
 #Energy { border: solid #5D6D7E 20px;}
 #EnergyToggled { border: solid #5D6D7E 20px; background-color: #5D6D7E; color : white; font-weight: bold; }
+
+#Healthcare {border: solid #E74C3C 20px;}
+#HealthcareToggled { border: solid #E74C3C 20px; background-color: #E74C3C; color : white; font-weight: bold; }
 
 #Industrials { border: solid #F39C12 20px;}
 #IndustrialsToggled { border: solid #F39C12 20px; background-color: #F39C12; color : white; font-weight: bold; }
