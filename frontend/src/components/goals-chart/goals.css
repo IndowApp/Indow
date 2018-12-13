@@ -23,15 +23,3 @@
 .recharts-default-legend {
     display: none;
 }
-.recharts-layer {
-    width: 50px;
-} 
-.recharts-cartesian-axis {
-    width: 50px;
-}
-.recharts-yAxis {
-    width: 50px;
-} 
-.yAxis {
-    width: 50px;
-}
