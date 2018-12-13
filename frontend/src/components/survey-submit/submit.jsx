@@ -7,7 +7,7 @@ class Submit extends Component {
         return(
             <Link to="/" className="survey-link">
                 <button className="survey-submit">
-                    Sign Me Up!
+                    Take Me Home!
                 </button>
             </Link>
         )

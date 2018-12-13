@@ -99,13 +99,13 @@ class InterestArea extends Component {
                     </div>
                     {/* slide 3 */}
                     <div className="slideWrapper"> 
-                        <InterestCard sector="Industrials" companyType="Aerospace, defense, machinery, construction, fabrication and manufacturing companies" info="In general, the industry’s growth is driven by demand for building construction and manufactured products like agricultural equipment."/>
-                        <InterestCard sector="Technology" companyType="Electronics manufacturers, software developers and information technology firms" info="These businesses are driven by upgrade cycles and the general health of the economy, although growth has been robust over the years." />  
+                        <InterestCard sector="Industrials" companyType="Aerospace, defense, machinery, construction, and manufacturing companies" info="In general, the industry’s growth is driven by demand for building construction and manufactured products like agricultural equipment."/>
+                        <InterestCard sector="Technology" companyType="Electronics manufacturers, software and information technology firms" info="These businesses are driven by upgrade cycles and the general health of the economy, although growth has been robust over the years." />  
                         <InterestCard sector="Telecom" companyType="Wireless providers, cable companies, internet service providers and satellite companies" info="In general, these companies generate recurring revenue from consumers, but some subsets of the industry are facing rapid change."/>
                     </div>
                     {/* slide 4 */}
                     <div className="slideWrapper smallSlider">
-                        <InterestCard sector="Materials" companyType="Mining, refining, chemical, and forestry companies "  info="These comanies are focused on discovering and developing raw materials. Since they are at the beginning of the supply chain, they are vulnerable to changes in the business cycle."/>
+                        <InterestCard sector="Materials" companyType="Mining, refining, chemical, and forestry companies "  info="Companies focused on discovering and developing raw materials. They are at the beginning of the supply chain, so vulnerable to changes in the business cycle."/>
                         <InterestCard sector="RealEstate" companyType="Residential, industrial, and retail real estate" info="The main source of revenue for these companies comes from rent income and real estate capital appreciation. As a result, this sector is sensitive to interest rate changes."/>
                     </div>
                 </Slider>
