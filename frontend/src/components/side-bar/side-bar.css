@@ -1,14 +1,15 @@
 .sidebar {
     width: 25%;
     height: 100vh;
-    background: #f6f6f6;
+    background: #E7E7E7;
     /* position: fixed;  */
     float: left;
     top: 10px;
     color: #282c34;
 }
 .sidebar button {
-    width: 100%;
+    width: 95%;
+    margin:auto;
     background: white;
     border: none;
     margin: 5px 0px;

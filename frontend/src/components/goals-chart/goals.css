@@ -1,5 +1,5 @@
 .goals {
-    margin-left: 200px;
+    margin-left: 100px;
 }
 .goals h3 {
     text-align: left;
@@ -22,4 +22,7 @@
 }
 .recharts-default-legend {
     display: none;
+}
+Tooltip {
+    font-size: 12px;
 }
